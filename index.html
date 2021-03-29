@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Number Guesser</title>
+  </head>
+  <body>
+     <h2 class="instr">Instructions</h2>
+    <div class="instructions">
+      <div class="instruction">
+        <h3>Step 1</h3>
+        <p>Input a number between 0 and 9</p>
+      </div>
+      <div class="instruction">
+        <h3>Step 2</h3>
+        <p>
+          Click "Make a Guess" to submit your guess and see who won the round.
+        </p>
+      </div>
+      <div class="instruction">
+        <h3>Step 3</h3>
+        <p>Click "Next Round" to play again.</p>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <header>
+        <h1>Number Guesser</h1>
+      </header>
+
+      <div class="rounds">
+        <p class="round-label">Round <span id="round-number">1</span></p>
+        <p class="guess-label">
+          Target Number: <span id="target-number">?</span>
+        </p>
+      </div>
+
+      <div class="guessing-area">
+        <div class="guess computer-guess">
+          <div class="guess-title">
+            <p class="guess-label">Computer</p>
+            <p class="score-label">Score: <span id="computer-score">0</span></p>
+          </div>
+          <p id="computer-guess">?</p>
+          <p class="winning-text" id="computer-wins"></p>
+        </div>
+        <div class="guess human-guess">
+          <div class="guess-title">
+            <p class="guess-label">You</p>
+            <p class="score-label">Score: <span id="human-score">0</span></p>
+          </div>
+          <input type="number" id="human-guess" min="0" max="9" value="0" />
+          <div class="number-controls">
+            <button class="number-control left" id="subtract" disabled>
+              -
+            </button>
+            <button class="number-control right" id="add">+</button>
+          </div>
+          <button class="button" id="guess">Make a Guess</button>
+        </div>
+      </div>
+
+      <div class="next-round-container">
+        <button class="button" id="next-round" disabled>Next Round</button>
+      </div>
+    </div>
+
+    <footer
+      id="main-footer"
+      class="bg-primary text-white mt-5 text-center pr-2"
+    >
+      <div class="container">
+        <!-- <div class="row">
+          <div class="col"> -->
+        <p class="lead text-center">
+          Copyright &copy;
+          <span id="year">2021</span>
+          Rajeev KUMAR
+        </p>
+        <!-- </div>
+        </div> -->
+      </div>
+    </footer>
+
+
+
+
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <script src="./script.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
